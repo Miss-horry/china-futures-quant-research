@@ -1,0 +1,20 @@
+product: RB
+exchange: SHFE
+multiplier: 10.0
+tick_size: 1.0
+# Conservative research defaults. Official daily settlement parameters override upward.
+conservative_margin_rate: 0.12
+maintenance_margin_rate: 0.10
+base_price_limit_rate: 0.10
+last_trade_day_of_month: 15
+settlement_type: physical
+version: SHFE_RB_RESEARCH_2026_08
+source_url: https://www.shfe.com.cn/products/futures/metal/ferrousandpreciousmetal/rb_f/
+day_sessions:
+  - ["09:00", "10:15"]
+  - ["10:30", "11:30"]
+  - ["13:30", "15:00"]
+night_sessions:
+  - ["21:00", "23:00"]
+session_source_url: https://www.shfe.com.cn/upload/20211021/1634804081608.pdf
+night_calendar_source_url: https://www.shfe.com.cn/services/calenderandholidays/holiday/

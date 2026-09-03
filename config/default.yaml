@@ -1,0 +1,48 @@
+system:
+  name: cn_futures_quant
+  timezone: Asia/Shanghai
+  base_currency: CNY
+  fail_closed: true
+  random_seed: 20260811
+
+research:
+  signal_time: close
+  execution_reference: next_open
+  initial_capital_cny: 1000000
+  warmup_sessions: 20
+  fast_window: 5
+  slow_window: 20
+  atr_window: 14
+  annual_risk_budget: 0.12
+  strategy_version: ts_trend_v1
+
+contract_selection:
+  minimum_days_to_expiry: 20
+  liquidity_switch_ratio: 1.15
+  volume_weight: 0.6
+  open_interest_weight: 0.4
+
+risk:
+  max_margin_utilization: 0.35
+  max_gross_leverage: 2.0
+  max_product_notional_fraction: 0.75
+  max_contracts_per_product: 100
+  minimum_available_cash_fraction: 0.25
+  locked_limit_stress_days: 2
+  extra_stress_shock: 0.03
+  hard_drawdown: 0.15
+
+execution:
+  max_volume_participation: 0.05
+  base_slippage_ticks: 1
+  impact_ticks_at_full_participation: 4
+  reject_open_on_limit_lock: true
+
+evolution:
+  auto_promote: false
+  min_walk_forward_folds: 3
+  min_positive_folds: 2
+  min_shadow_sessions: 120
+  min_filled_orders: 100
+  require_multiple_regimes: true
+
